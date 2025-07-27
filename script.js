@@ -14,11 +14,16 @@ const prompts = [
   "Why do I cry during software updates?"
 ];
 
+window.onload = () => {
+  const firstPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+  document.getElementById("prompt").innerText = firstPrompt;
+};
+
 function checkResponse() {
   const response = document.getElementById("response").value.toLowerCase();
   const resultBox = document.getElementById("result");
 
-  let failWords = ["i feel", "lol", "idk", "maybe", "haha", "love", "sorry", "!", "?", "bro", "omg", "oh", "..", "xD", "uh"];
+  let failWords = ["i feel", "lol", "idk", "maybe", "haha", "love", "sorry", "!", "?", "bro", "omg", "oh", "..", "xD"];
   let failed = failWords.some(word => response.includes(word));
 
   if (response.trim() === "") {
@@ -29,8 +34,9 @@ function checkResponse() {
     resultBox.innerHTML = "✅ PASS: Damn, you are successfully robotic.";
   }
 
-  // New random prompt each time
+  // Load new prompt
   const newPrompt = prompts[Math.floor(Math.random() * prompts.length)];
   document.getElementById("prompt").innerText = newPrompt;
   document.getElementById("response").value = "";
 }
+
