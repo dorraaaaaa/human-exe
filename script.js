@@ -24,7 +24,7 @@ function checkResponse() {
   const response = document.getElementById("response").value.toLowerCase();
   const resultBox = document.getElementById("result");
 
-  const failWords = ["i feel", "lol", "idk", "maybe", "haha", "love", "sorry", "!", "?", "bro", "omg", "oh", "uh", "..", "xD"];
+  const failWords = ["i feel", "lol", "idk", "maybe", "haha", "yay", "uh no", "uh yes", "damn", "love", "sorry", "!", "?", "bro", "omg", "oh", "uh", "..", "xD"];
   const failed = failWords.some(word => response.includes(word));
 
   if (response.trim() === "") {
