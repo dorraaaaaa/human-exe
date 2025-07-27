@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🤖 Human.exe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle at top left, #111 40%, #000);
+      background: linear-gradient(135deg, #ffe6f0 20%, #fff0f8 100%);
       font-family: 'Orbitron', monospace;
-      color: #0ff;
+      color: #b00060;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,42 +19,58 @@
       min-height: 100vh;
     }
     .container {
-      background: #111;
-      border: 2px solid #0ff;
+      background: #fff0f5;
+      border: 2px solid #f8c2d8;
       border-radius: 20px;
       padding: 30px;
       max-width: 700px;
       width: 90%;
-      box-shadow: 0 0 20px #0ff4;
+      box-shadow: 0 0 20px #ffcce5;
+      position: relative;
+      overflow: hidden;
+    }
+    .scanline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(255, 105, 180, 0.5);
+      animation: scan 2s linear infinite;
+    }
+    @keyframes scan {
+      0% { top: 0; }
+      100% { top: 100%; }
     }
     h1 {
       text-align: center;
       font-size: 2.5em;
-      color: #0ff;
+      color: #d10078;
       margin-bottom: 20px;
     }
     #prompt {
       font-size: 1.3em;
       padding: 15px;
-      border-left: 4px solid #0ff;
+      border-left: 4px solid #f39ac8;
       margin-bottom: 20px;
-      background-color: #000;
+      background-color: #fff8fc;
+      color: #99004d;
     }
     textarea {
       width: 100%;
       height: 100px;
       padding: 10px;
       font-size: 1em;
-      background: #000;
-      border: 1px solid #0ff;
-      color: #0ff;
+      background: #fff8fc;
+      border: 1px solid #f8c2d8;
+      color: #99004d;
       border-radius: 10px;
       resize: none;
     }
     button {
       margin-top: 15px;
-      background: #0ff;
-      color: #000;
+      background: #ffb3d1;
+      color: #600030;
       font-weight: bold;
       padding: 12px 25px;
       border: none;
@@ -65,22 +80,27 @@
       transition: background 0.3s ease;
     }
     button:hover {
-      background: #0cc;
+      background: #ff99c8;
     }
     #result {
       margin-top: 20px;
       font-size: 1.2em;
       text-align: center;
+      color: #b00060;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="scanline"></div>
     <h1>🤖 Human.exe</h1>
     <div id="prompt">"My toaster gaslit me again."</div>
     <textarea id="response" placeholder="Type your robotic reply here..."></textarea>
     <button onclick="checkResponse()">Check Answer</button>
     <div id="result"></div>
+    <p style="text-align: center; font-size: 1em; margin-top: 30px; color: #cc0077;">
+      can u sound like a robot? lemme see what u got ;3
+    </p>
   </div>
   <script src="script.js"></script>
 </body>
