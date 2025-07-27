@@ -1,6 +1,6 @@
 const prompts = [
   "when I code I always get errors, Im tired :( ",
-  "Do robots dream of WiFi?"
+  "Do robots dream of WiFi?",
   "how do u feel when your code doesnt run after 10hours of hard work?",
   "what should I say to someone if he's crying in front of me ?",
   "How would you comfort a crying toaster?",
