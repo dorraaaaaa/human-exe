@@ -21,7 +21,7 @@ function checkResponse() {
   } else if (failed) {
     resultBox.innerHTML = "❌ FAIL: You sound too human buddy, check your emotions.";
   } else {
-    resultBox.innerHTML = "✅ PASS: damn, you are successfully robotic.";
+    resultBox.innerHTML = "✅ PASS: Damn, you are successfully robotic.";
   }
 
   // New random prompt each time
