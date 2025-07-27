@@ -23,8 +23,8 @@ function checkResponse() {
   const response = document.getElementById("response").value.toLowerCase();
   const resultBox = document.getElementById("result");
 
-  let failWords = ["i feel", "lol", "idk", "maybe", "haha", "love", "sorry", "!", "?", "bro", "omg", "oh", "..", "xD"];
-  let failed = failWords.some(word => response.includes(word));
+  const failWords = ["i feel", "lol", "idk", "maybe", "haha", "love", "sorry", "!", "?", "bro", "omg", "oh", "..", "xD"];
+  const failed = failWords.some(word => response.includes(word));
 
   if (response.trim() === "") {
     resultBox.innerHTML = "❌ Type something first!";
@@ -39,4 +39,3 @@ function checkResponse() {
   document.getElementById("prompt").innerText = newPrompt;
   document.getElementById("response").value = "";
 }
-
